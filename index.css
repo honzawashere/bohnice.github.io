@@ -6,16 +6,47 @@ body {
     overflow: hidden;
     font-family: 'Nunito Sans', sans-serif;
     font-family: 'Open Sans', sans-serif;
+    user-select: none;
 }
 
-.background {
-    background: rgb(112,112,218);
-    background: linear-gradient(-45deg, #5296ee, #3c64e7, #7f23d5, #d523d2);
-    width: 100%;
-    height: 100vh;
-    filter: blur(16px);
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+@media (prefers-color-scheme: light) {
+    .background {
+        background: rgb(128, 128, 253);
+        background: linear-gradient(-45deg, #8282ff, #982aff, #ff2cfb);
+        width: 100%;
+        height: 100vh;
+        filter: blur(16px);
+        background-size: 400% 400%;
+        animation: gradient 10s ease infinite;
+    }
+
+    .middle_container h1, .middle_container h2 {
+        color: black;
+    }
+
+    path {
+        fill: black;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .background {
+        background: rgb(112,112,218);
+        background: linear-gradient(-45deg, #5454a2, #6216a8, #a21aa0);
+        width: 100%;
+        height: 100vh;
+        filter: blur(16px);
+        background-size: 400% 400%;
+        animation: gradient 10s ease infinite;
+    }
+
+    .middle_container h1, .middle_container h2 {
+        color: white;
+    }
+
+    path {
+        fill: white;
+    }
 }
 
 @keyframes gradient {
@@ -41,10 +72,36 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    text-align: center;
 }
 
 .middle_container h1 {
     font-weight: 300;
+    user-select: none;
+    -webkit-user-drag: none;
+    margin: 0;
+    padding: 0 0 5px;
+}
 
+.middle_container h2 {
+    font-weight: 300;
+    font-size: 20px;
+    user-select: none;
+    -webkit-user-drag: none;
+    margin: 0;
+    padding: 0;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+a {
+    color: transparent;
+    background: transparent;
+}
+
+svg {
+    opacity: 100% !important;
 }
