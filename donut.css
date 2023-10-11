@@ -1,0 +1,36 @@
+@keyframes text-shine {
+    0% {
+        background-position: 0 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #0e0e0e;
+}
+
+.donut-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+pre {
+    text-align: center;
+    color: white;
+    background: linear-gradient(-45deg, #8484fd, #9524fd, #fa29f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: text-shine 5s ease-in-out infinite alternate;
+}
