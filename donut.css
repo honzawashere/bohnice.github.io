@@ -16,6 +16,7 @@ body {
     height: 100vh;
     margin: 0;
     background: #0e0e0e;
+    user-select: none;
 }
 
 .donut-container {
