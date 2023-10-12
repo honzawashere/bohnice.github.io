@@ -1,0 +1,12 @@
+body {
+    background: black;
+    margin: 0;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+.middle {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
