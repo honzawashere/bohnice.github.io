@@ -7,5 +7,17 @@ function cigan() {
     img.style.transform = `rotate(${n}deg)`
 }
 function dalordino() {
-    setInterval(() => { cigan() }, 0)
+    document.body.onclick = () => {
+        if(document.querySelector("#click-me").classList.contains("hidden")) {
+            if(document.querySelector("audio").paused) {
+                document.querySelector("#audio").play()
+            } else {
+                document.querySelector("#audio").pause()
+            }
+            return
+        }
+        setInterval(() => { cigan() }, 0)
+        document.querySelector("#click-me").classList.add("hidden")
+        document.querySelector("#audio").play()
+    }
 }
