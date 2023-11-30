@@ -11,8 +11,7 @@ body {
 
 @media (prefers-color-scheme: light) {
     .background {
-        background: rgb(128, 128, 253);
-        background: linear-gradient(-45deg, #8282ff, #982aff, #ff2cfb);
+        background: #F1F1F1;
         width: 100%;
         height: 100vh;
         filter: blur(16px);
@@ -31,8 +30,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
     .background {
-        background: rgb(112,112,218);
-        background: linear-gradient(-45deg, #5454a2, #6216a8, #a21aa0);
+        background: #0E0E0E;
         width: 100%;
         height: 100vh;
         filter: blur(16px);
